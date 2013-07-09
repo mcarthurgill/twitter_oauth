@@ -12,5 +12,8 @@ button a {
 
 nav {
 	width: 100%;
-	display: inline-block;
+}
+
+nav button {
+	float: right;
 }

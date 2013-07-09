@@ -1,3 +1,7 @@
+function emptyPartial() {
+	$('#loading_image').empty();
+}
+
 $(document).ready(function() {
 	$('#form_tweet').on("submit", function(e){
 		e.preventDefault();
@@ -5,6 +9,7 @@ $(document).ready(function() {
 		$.post('/tweet', $('input[name=tweet]').serialize()).done(function(response){
 			$('#loading_image').html(response);
 			$('#form_tweet')[0].reset();
+			setTimeout("emptyPartial()", 2000);
 		});
 	});
 });
