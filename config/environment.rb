@@ -1,3 +1,6 @@
+ENV['TWITTER_KEY'] = "sBsUz40EZAmQUcASvgpA"
+ENV['TWITTER_SECRET'] = "2P3WLav8SaCDpf1f00OEJ04bjI27Wj1uL9HP7h4Wwg"
+
 # Set up gems listed in the Gemfile.
 # See: http://gembundler.com/bundler_setup.html
 #      http://stackoverflow.com/questions/7243486/why-do-you-need-require-bundler-setup
@@ -38,4 +41,6 @@ require APP_ROOT.join('config', 'database')
 Twitter.configure do |config|
   config.consumer_key = ENV['TWITTER_KEY']
   config.consumer_secret = ENV['TWITTER_SECRET']
+  config.oauth_token = "630392542-L47hnULWUU5PkXSQGbzw8RZAmmrAq2w0NU5sUxLI"
+  config.oauth_token_secret = "7wu4ktMwXp3JKFu5b4DjeQbaKG0NY1IMiOxXA8to"
 end
